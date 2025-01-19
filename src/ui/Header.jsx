@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 import { headerAnimation } from "../keyframes/Keyframes";
+import Avatar from "../../public/foto.png";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -110,7 +111,7 @@ function Header() {
           </h1>
         </StyledSpan>
         <StyledPicture>
-          <img src="../public/foto.png" alt="Developer Picture" />
+          <img src={Avatar} alt="Developer Picture" />
         </StyledPicture>
       </StyledHeader>
       <Slogan>frontend developer and designer</Slogan>
