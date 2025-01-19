@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+import WebsitePic from "../../public/logo.png";
 
 const Logo = styled(Link)`
   position: fixed;
@@ -10,7 +12,7 @@ const Logo = styled(Link)`
 function WebsiteLogo() {
   return (
     <Logo to="/home">
-      <img src="../public/logo.png" alt="logo" />
+      <img src={WebsitePic} alt="logo" />
     </Logo>
   );
 }
