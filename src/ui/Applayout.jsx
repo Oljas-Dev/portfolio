@@ -7,7 +7,7 @@ import Cursor from "./Cursor";
 import { useToggle } from "../contexts/BlogContext";
 import { useRef } from "react";
 import MobileFooter from "./MobileFooter";
-import ToTopBtn from "./toTopBtn";
+import ToTopBtn from "./ToTopBtn";
 
 const MainStyled = styled.main`
   overflow-y: auto;
