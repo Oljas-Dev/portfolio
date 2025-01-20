@@ -21,6 +21,10 @@ const StyledDesignElements = styled.span`
     position: absolute;
     font-size: 4rem;
     color: var(--color-elements);
+
+    @media only screen and (max-width: 37.5em) {
+      position: relative;
+    }
   }
 
   @media only screen and (max-width: 56.25em) {

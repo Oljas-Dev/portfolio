@@ -14,24 +14,18 @@ const Container = styled.div`
     switch (props.$mode) {
       case "secondary":
         return css`
-          align-self: center;
           display: flex;
           align-items: center;
           justify-content: center;
 
           max-height: 35rem;
           position: relative;
-          transform: translateX(-350%);
+          transform: translateX(-250%);
           z-index: 1;
 
           @media only screen and (max-width: 62.5em) {
-            transform: translateX(-145%);
-          }
-          @media only screen and (max-width: 50em) {
-            transform: translateX(-40%);
-          }
-          @media only screen and (max-width: 18.75em) {
             transform: none;
+            flex-direction: column;
           }
         `;
 
@@ -53,6 +47,10 @@ const Container = styled.div`
 
           @media only screen and (max-width: 43.75em) {
             top: 24rem;
+          }
+          @media only screen and (max-height: 34.37em) {
+            top: 50%;
+            left: 15%;
           }
         `;
 

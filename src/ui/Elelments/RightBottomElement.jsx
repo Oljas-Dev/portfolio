@@ -62,8 +62,9 @@ const RightBottomElement = styled(StyledDesignElements)`
               color: var(--color-links);
               text-shadow: 0px 8px 8px rgb(0, 0, 0, 0.25);
             }
-            @media only screen and (max-width: 18.75em) {
-              transform: translate(-16rem, 22rem);
+            @media only screen and (max-width: 37.5em) {
+              top: 5rem;
+              left: -18.5rem;
             }
           }
 
@@ -98,6 +99,7 @@ const RightBottomElement = styled(StyledDesignElements)`
             width: 90%;
             left: 5%;
 
+            z-index: 1000;
             box-shadow: 0 0.4rem 0.4rem rgb(0, 0, 0, 0.25);
           }
         `;

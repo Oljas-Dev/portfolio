@@ -112,7 +112,7 @@ html {
   @media only screen and (max-width: 43.75em) {
     font-size: 45%;
   }
-  @media only screen and (max-height: 37.5em) {
+  @media only screen and (max-height: 43.75em) {
     font-size: 45%;
   }
   @media only screen and (max-width: 31.25em) {

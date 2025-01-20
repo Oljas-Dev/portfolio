@@ -65,8 +65,9 @@ const RightTopElement = styled(StyledDesignElements)`
               color: var(--color-links);
               text-shadow: 0px 8px 8px rgb(0, 0, 0, 0.25);
             }
-            @media only screen and (max-width: 18.75em) {
-              transform: translate(-13rem, 22rem);
+            @media only screen and (max-width: 37.5em) {
+              top: 5rem;
+              left: -15rem;
             }
           }
 

@@ -34,6 +34,9 @@ const Container = styled.div`
     flex-direction: column-reverse;
     margin-bottom: 10rem;
   }
+  @media only screen and (max-width: 37.5em) {
+    margin-top: 3.5rem;
+  }
   @media only screen and (max-width: 18.75em) {
     margin-top: 7rem;
   }

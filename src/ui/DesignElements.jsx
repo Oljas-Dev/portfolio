@@ -14,12 +14,13 @@ const StyledElements = styled.div``;
 const StyledMobile = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 3rem;
 
   width: 100%;
-  height: 100dvh;
-  transform: translateY(35%);
+  height: 100%;
+  transform: translateY(5%);
 
   p {
     font-size: 4rem;
@@ -31,10 +32,14 @@ const StyledMobile = styled.div`
     display: none;
   }
   @media only screen and (max-height: 43.75em) {
-    transform: translateY(40%);
+    transform: translateY(13%);
   }
   @media only screen and (max-height: 37.5em) {
+    transform: translateY(18%);
     gap: 2rem;
+  }
+  @media only screen and (max-height: 34.37em) {
+    transform: none;
   }
 `;
 

@@ -67,6 +67,11 @@ const PlusMinus = styled.div`
           ${StyledButton}:active & {
             background: var(--color-dashes);
           }
+
+          // @media only screen and (max-height: 43.75em) {
+          //   top: 10rem;
+          //   left: 7.8rem;
+          // }
         `;
 
       default:

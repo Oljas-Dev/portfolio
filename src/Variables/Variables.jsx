@@ -31,29 +31,23 @@ const repeatingCode = {
 const ArticleContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 3rem;
   margin: 0 2rem 0 2rem;
-  transform: translateX(1%);
+  // transform: translateX(1%);
 
   cursor: pointer;
 
-  @media only screen and (max-width: 68.25em) {
-    transform: translateX(-10%);
-  }
   @media only screen and (max-width: 62.5em) {
     transform: none;
+    margin-bottom: 10rem;
   }
   @media only screen and (max-width: 50em) {
     flex-direction: column;
-    transform: translateX(15%);
-    margin-bottom: 10rem;
   }
-  @media only screen and (max-width: 25em) {
-    transform: none;
-  }
-  @media only screen and (max-width: 18.75em) {
-    margin-top: 8rem;
+  @media only screen and (max-width: 37.5em) {
+    margin-top: 4rem;
   }
 `;
 
@@ -185,6 +179,7 @@ const VeilBottom = styled.span`
   bottom: 0;
   right: 0;
   left: 5%;
+  z-index: 1000;
 
   padding: 1rem;
 `;

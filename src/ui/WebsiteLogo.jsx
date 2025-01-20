@@ -7,6 +7,7 @@ const Logo = styled(Link)`
   position: fixed;
   top: 2.5rem;
   left: 2.5rem;
+  z-index: 50;
 `;
 
 function WebsiteLogo() {

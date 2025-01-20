@@ -1,5 +1,3 @@
-import { useRef } from "react";
-
 import { useDesignElements } from "../services/useDesignElements";
 import { ArticleContainer, StyledOptions } from "../Variables/Variables";
 import ArticlePreview from "../ui/ArticleGroup";
@@ -11,8 +9,6 @@ function Samples() {
   const { portfolioArticles: articles, isLoadingPortfolio: isLoading } =
     useDesignElements();
 
-  const topRef = useRef(null);
-
   if (isLoading) {
     return <Loaders />;
   }
@@ -20,7 +16,7 @@ function Samples() {
   return (
     <Decoration>
       <Decoration.Main>
-        <StyledOptions $mode="secondary" ref={topRef}>
+        <StyledOptions $mode="secondary">
           <Modal>
             <Modal.Options mode="secondary" path="/options" />
           </Modal>

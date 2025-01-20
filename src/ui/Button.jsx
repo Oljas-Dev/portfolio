@@ -29,11 +29,6 @@ const StyledButton = styled(NavLink)`
               var(--color-btngradient1)
             );
           }
-
-          @media only screen and (max-height: 43.75em) {
-            width: 20rem;
-            height: 20rem;
-          }
         `;
 
       default:
@@ -95,11 +90,6 @@ const ButtonStroke = styled.div`
               var(--color-btnstroke1)
             );
             box-shadow: none;
-          }
-
-          @media only screen and (max-height: 43.75em) {
-            width: 22rem;
-            height: 22rem;
           }
         `;
 

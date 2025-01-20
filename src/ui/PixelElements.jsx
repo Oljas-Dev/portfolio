@@ -4,9 +4,16 @@ import { rotate, appear, rotateReverse } from "../keyframes/Keyframes";
 const StyledPixels = styled.div`
   ${(props) => {
     switch (props.$mode) {
-      case "straight":
+      case "straightTop":
         return css`
           border-top: 1.5rem dotted var(--color-dashes);
+
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+
+          z-index: 50;
 
           margin: ${(props) => props.$margin};
           transition: margin 0.2s ease-out;
@@ -23,10 +30,33 @@ const StyledPixels = styled.div`
 
           @media only screen and (max-width: 43.75em) {
             display: ${(props) => props.$display};
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
+          }
+        `;
+
+      case "straightBottom":
+        return css`
+          border-top: 1.5rem dotted var(--color-dashes);
+
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          left: 0;
+
+          margin: ${(props) => props.$margin};
+          transition: margin 0.2s ease-out;
+
+          &:before {
+            content: "";
+            display: block;
+            border-bottom: 0.5rem dotted var(--color-dashes);
+
+            margin-top: 2rem;
+          }
+
+          // Toggle for mobile and tab screens
+
+          @media only screen and (max-width: 43.75em) {
+            display: ${(props) => props.$display};
           }
         `;
 

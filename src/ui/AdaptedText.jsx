@@ -125,7 +125,7 @@ const t = {
 
 t.stringified = JSON.stringify(t, null, 2);
 
-console.log(t.stringified);
+// console.log(t.stringified);
 
 function AdaptedText({ article, name }) {
   const topRef = useRef(null);
