@@ -12,6 +12,7 @@ import ToTopBtn from "./ToTopBtn";
 const MainStyled = styled.main`
   overflow-y: auto;
   overflow-x: hidden;
+  padding-bottom: -10rem;
 
   background: linear-gradient(
     45deg,
