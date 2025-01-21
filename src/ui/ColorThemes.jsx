@@ -1,6 +1,10 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
+
 import { runner } from "../keyframes/Keyframes";
 import { useToggle } from "../contexts/BlogContext";
+import colorBtn from "../../public/color_btn.png";
+import { Flex } from "../Variables/Variables";
 
 const StyledColorsToggle = styled.div`
   text-align: right;
@@ -19,7 +23,7 @@ const StyledColorsToggle = styled.div`
     letter-spacing: ${(props) => props.$space};
   }
 
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 43.75em) {
     display: none;
   }
 `;
@@ -52,7 +56,7 @@ const Colors = styled.div`
   margin-top: 1rem;
   visibility: ${(props) => props.$visibility};
 
-  transition: visibility 0.2s ease-in;
+  transition: all 0.2s ease-in;
 `;
 
 const Samples = styled.span`
@@ -62,8 +66,12 @@ const Samples = styled.span`
   background-color: ${(props) => props.$backcolor};
   border: 2px solid ${(props) => props.$border};
 
-  box-shadow: -2px -4px 4px rgb(0, 0, 0, 0.2);
+  box-shadow: ${(props) => props.$shadow};
   cursor: pointer;
+
+  position: ${(props) => props.$absolute};
+  top: 0.2rem;
+  left: ${(props) => props.$left};
 `;
 
 const ClickOutsideDetector = styled.div`
@@ -79,14 +87,55 @@ const ClickOutsideDetector = styled.div`
   z-index: 2;
 `;
 
-function ColorThemes() {
+const MobileColors = styled(Flex)`
+  gap: 1rem;
+  position: relative;
+  transition: all 0.5s ease-in;
+
+  border: 2px solid ${(props) => props.$color};
+  border-radius: 50%;
+  img {
+    z-index: 100;
+  }
+`;
+
+function ColorThemes({ footer }) {
   const {
     handleToggle,
+    handleMobileToggle,
     handleSelectedColor,
     colorThemeToggle: toggle,
     selectedColor,
     colors,
+    colorsMobile,
   } = useToggle();
+
+  if (footer) {
+    return (
+      <MobileColors
+        $color={colorsMobile ? "var(--color-mtext)" : "var(--color-inactive)"}
+      >
+        <img src={colorBtn} alt="colors" onClick={() => handleMobileToggle()} />
+        {colors.map((color, i) => (
+          <Samples
+            $absolute="absolute"
+            $left={colorsMobile ? `${i * 4 + 4 + "rem"}` : "0.4rem"}
+            $backcolor={`${
+              !color.inProgress ? color.icon : "var(--color-inactive)"
+            }`}
+            $border={`${
+              color.background === selectedColor
+                ? color.color
+                : "var(--color-elements)"
+            }`}
+            id={color.id}
+            key={color.id}
+            onClick={() => handleSelectedColor(color)}
+          />
+        ))}
+      </MobileColors>
+    );
+  }
 
   return (
     <>
@@ -110,6 +159,7 @@ function ColorThemes() {
                   ? color.color
                   : "var(--color-elements)"
               }`}
+              $shadow="-2px -4px 4px rgb(0, 0, 0, 0.2)"
               id={color.id}
               key={color.id}
               onClick={() => handleSelectedColor(color)}
@@ -120,5 +170,9 @@ function ColorThemes() {
     </>
   );
 }
+
+ColorThemes.propTypes = {
+  footer: PropTypes.bool,
+};
 
 export default ColorThemes;

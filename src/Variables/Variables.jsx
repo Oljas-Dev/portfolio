@@ -179,6 +179,7 @@ const VeilBottom = styled.span`
   background-color: var(--color-mgradient1);
   width: 90%;
   height: 6rem;
+  padding: 1rem;
 
   position: fixed;
   bottom: 0;
@@ -186,7 +187,7 @@ const VeilBottom = styled.span`
   left: 5%;
   z-index: 1000;
 
-  padding: 1rem;
+  transition: all 0.2s linear;
 `;
 const VeilTop = styled.span`
   background-color: var(--color-mgradient2);
@@ -228,6 +229,11 @@ const Tags = styled.span`
   border-radius: 5px;
 `;
 
+const Flex = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export {
   repeatingCode,
   StyledOptions,
@@ -238,4 +244,5 @@ export {
   ArticleContainer,
   StyledParagraph,
   Tags,
+  Flex,
 };

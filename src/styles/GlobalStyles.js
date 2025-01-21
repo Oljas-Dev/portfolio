@@ -90,7 +90,7 @@ ${normalize}
  --radius-full: 50%;
  --radius-sm: 0.5rem;
 
- transition: all 0.2s;
+ transition: all 0.2s linear;
 }
 
 *,
