@@ -10,20 +10,20 @@ const ToggleContext = createContext();
 function ToggleProvider({ children }) {
   const [colorThemeToggle, setColorThemeToggle] = useState(true);
   const [newMarker, setNewMarker] = useState();
-  const [appTheme, setAppTheme] = useLocalStorageState("olive", "appTheme");
+  const [appTheme, setAppTheme] = useLocalStorageState("dark", "appTheme");
   const [selectedColor, setSelectedColor] = useState(appTheme);
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (appTheme === "olive") {
-        setAppTheme("dark");
-        document.documentElement.classList = "";
-        document.documentElement.classList.add("dark-theme");
-        setSelectedColor("dark");
-      }
-    }, 5000);
-  }, [setAppTheme, appTheme]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (appTheme === "olive") {
+  //       setAppTheme("dark");
+  //       document.documentElement.classList = "";
+  //       document.documentElement.classList.add("dark-theme");
+  //       setSelectedColor("dark");
+  //     }
+  //   }, 5000);
+  // }, [setAppTheme, appTheme]);
 
   useEffect(
     function () {

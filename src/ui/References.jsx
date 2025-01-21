@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import behance from "../../public/sprite.svg#behance";
 
 const Container = styled.div`
   display: flex;
@@ -14,19 +15,22 @@ const Icon = styled.svg`
 function References() {
   return (
     <Container>
-      <a href="#">
+      <a href="https://www.behance.net/olzhasmedets" target="_blank">
         <Icon>
-          <use xlinkHref="../../public/sprite.svg#behance" />
+          <use xlinkHref={behance} />
         </Icon>
       </a>
 
-      <a href="#">
+      <a
+        href="https://www.linkedin.com/in/olzhas-medetbayev-97698a153/"
+        target="_blank"
+      >
         <Icon>
           <use xlinkHref="../../public/sprite.svg#linkedin" />
         </Icon>
       </a>
 
-      <a href="#">
+      <a href="https://github.com/Oljas-Dev" target="_blank">
         <Icon>
           <use xlinkHref="../../public/sprite.svg#github" />
         </Icon>

@@ -26,7 +26,7 @@ function Main({ children }) {
       <WebsiteLogo />
       <StyledPixels
         $mode="straightTop"
-        $margin={`4rem ${toggle ? "5.5rem" : "11rem"} 0 12rem`}
+        $margin={`4rem ${toggle ? "7rem" : "11rem"} 0 12rem`}
       />
       {children}
       <StyledPixels

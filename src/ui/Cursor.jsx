@@ -6,12 +6,15 @@ const StyledCursor = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: rgb(195, 220, 143, 0.5);
 
   position: absolute;
   transition: all 0.2s ease-in-out;
 
   z-index: 100;
+
+  @media only screen and (max-width: 43.75em) {
+    display: none;
+  }
 `;
 
 const CircleOne = styled(StyledCursor)`
