@@ -33,10 +33,8 @@ const StyledMobile = styled.div`
   }
   @media only screen and (max-height: 43.75em) {
     display: flex;
-    transform: translateY(13%);
   }
   @media only screen and (max-height: 37.5em) {
-    transform: translateY(18%);
     gap: 2rem;
   }
   @media only screen and (max-height: 34.37em) {
