@@ -62,7 +62,7 @@ function ToggleProvider({ children }) {
     if (!obj.inProgress) {
       setSelectedColor(obj.background);
       setAppTheme(obj.background);
-      handleToggle();
+      setColorThemeToggle(true);
       return toast.success(`${obj.background} color theme is now active`);
     }
   }
