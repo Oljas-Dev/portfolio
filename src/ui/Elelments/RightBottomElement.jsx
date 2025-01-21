@@ -92,7 +92,7 @@ const RightBottomElement = styled(StyledDesignElements)`
             display: ${(props) => props.$display}
             width: 80%;
             position: fixed;
-            bottom: 6rem;
+            bottom: 7rem;
           }
           @media only screen and (max-width: 56.25em) {
             width: 90%;
@@ -101,6 +101,12 @@ const RightBottomElement = styled(StyledDesignElements)`
             z-index: 1000;
             box-shadow: 0 0.4rem 0.4rem rgb(0, 0, 0, 0.25);
           }
+          
+          @media only screen and (max-height: 37.5em) {
+            bottom: 7rem;
+          }
+
+
         `;
     }
   }}

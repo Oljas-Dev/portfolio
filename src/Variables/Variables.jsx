@@ -178,7 +178,7 @@ const VeilBottom = styled.span`
   justify-content: space-between;
   background-color: var(--color-mgradient1);
   width: 90%;
-  height: 6rem;
+  height: 7rem;
   padding: 1rem;
 
   position: fixed;

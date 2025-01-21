@@ -99,10 +99,10 @@ const TopElement = styled(StyledDesignElements)`
             top: 16rem;
           }
           @media only screen and (max-width: 25em) {
-            top: 13rem;
+            top: 15rem;
           }
           @media only screen and (max-width: 17.69em) {
-            top: 16rem;
+            top: 20rem;
           }
         `;
     }

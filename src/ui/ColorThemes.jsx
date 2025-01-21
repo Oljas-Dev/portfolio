@@ -72,6 +72,10 @@ const Samples = styled.span`
   position: ${(props) => props.$absolute};
   top: 0.2rem;
   left: ${(props) => props.$left};
+
+  @media only screen and (max-width: 25em) {
+    top: 0.7rem;
+  }
 `;
 
 const ClickOutsideDetector = styled.div`
@@ -119,7 +123,7 @@ function ColorThemes({ footer }) {
         {colors.map((color, i) => (
           <Samples
             $absolute="absolute"
-            $left={colorsMobile ? `${i * 4 + 4 + "rem"}` : "0.4rem"}
+            $left={colorsMobile ? `${i * 4 + 6 + "rem"}` : "0.4rem"}
             $backcolor={`${
               !color.inProgress ? color.icon : "var(--color-inactive)"
             }`}

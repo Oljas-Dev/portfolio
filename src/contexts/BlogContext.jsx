@@ -50,7 +50,7 @@ function ToggleProvider({ children }) {
 
   function handleMobileToggle() {
     setColorsMobile((toggle) => !toggle);
-    setColorThemeToggle(false);
+    setColorThemeToggle(true);
   }
 
   function handleSelectedColor(obj) {
