@@ -48,7 +48,7 @@ const Container = styled.div`
           @media only screen and (max-width: 43.75em) {
             top: 24rem;
           }
-          @media only screen and (max-height: 34.37em) {
+          @media only screen and (max-height: 43.75em) {
             top: 50%;
             left: 15%;
           }
@@ -176,7 +176,7 @@ function Options({ mode, path }) {
         <Button plus={false} path={path} mode={mode} />
         <Elelments.Main mode={mode} compass={compass()} />
       </Container>
-      {mobileCheck && <Elelments.Mobile mode={mode} compass={compass()} />}
+      {mobileCheck && <Elelments.Mobile compass={compass()} />}
     </>
   );
 }

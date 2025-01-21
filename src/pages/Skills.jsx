@@ -7,6 +7,7 @@ import Decoration from "../ui/Decoration";
 import Modal from "../ui/Modal";
 import { SkillDescription, StyledOptions } from "../Variables/Variables";
 import { smoothAppear } from "../keyframes/Keyframes";
+import { toTop } from "../helpers/Helpers";
 
 const Container = styled.div`
   display: flex;
@@ -114,6 +115,7 @@ function Skills() {
     } else {
       setMoveSkills(34);
       setTag(id);
+      toTop(topRef);
     }
     return moveSkills;
   }
@@ -121,11 +123,11 @@ function Skills() {
   return (
     <Decoration>
       <Decoration.Main>
-        <StyledOptions $mode="secondary">
+        <StyledOptions $mode="secondary" ref={topRef}>
           <Modal>
             <Modal.Options mode="secondary" path="/options" />
           </Modal>
-          <Container $move={moveSkills} ref={topRef}>
+          <Container $move={moveSkills}>
             <SkillDescription>
               <span>
                 <h3>{description?.title}</h3>

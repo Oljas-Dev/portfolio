@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { useToggle } from "../contexts/BlogContext";
 import { StyledOptions } from "../Variables/Variables";
 import StyledPixels from "./PixelElements";
-import RightBottomElement from "./Elelments/RightBottomElement";
 import WebsiteLogo from "./WebsiteLogo";
 
 const DecorationContext = createContext();
@@ -19,9 +18,9 @@ function Decoration({ children }) {
 
 function Main({ children }) {
   const { colorThemeToggle: toggle } = useToggle();
-  const pathFilter = window.location.pathname.split("/");
+  // const pathFilter = window.location.pathname.split("/");
 
-  const mobileCheck = pathFilter[pathFilter.length - 1] === "options";
+  // const mobileCheck = pathFilter[pathFilter.length - 1] === "options";
   return (
     <StyledOptions>
       <WebsiteLogo />
@@ -35,7 +34,6 @@ function Main({ children }) {
         $margin="0 17rem 3rem 3rem"
         $display="none"
       />
-      {mobileCheck && <RightBottomElement $display="none" />}
     </StyledOptions>
   );
 }

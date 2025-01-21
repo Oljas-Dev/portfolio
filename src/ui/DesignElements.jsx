@@ -12,7 +12,7 @@ import { smoothAppear2 } from "../keyframes/Keyframes";
 const StyledElements = styled.div``;
 
 const StyledMobile = styled.div`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -28,10 +28,11 @@ const StyledMobile = styled.div`
     animation: ${smoothAppear2} 0.5s forwards;
   }
 
-  @media only screen and (min-width: 43.75em) {
-    display: none;
+  @media only screen and (max-width: 43.75em) {
+    display: flex;
   }
   @media only screen and (max-height: 43.75em) {
+    display: flex;
     transform: translateY(13%);
   }
   @media only screen and (max-height: 37.5em) {

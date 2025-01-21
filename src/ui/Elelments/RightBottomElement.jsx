@@ -41,9 +41,7 @@ const RightBottomElement = styled(StyledDesignElements)`
             }
           }
 
-          @media only screen and (max-width: 43.75em) {
-            display: none;
-          }
+          ${repeatingCode.media}
         `;
       case "secondary":
         return css`
@@ -91,6 +89,7 @@ const RightBottomElement = styled(StyledDesignElements)`
             width: 50%;
           }
           @media only screen and (max-width: 62.5em) {
+            display: ${(props) => props.$display}
             width: 80%;
             position: fixed;
             bottom: 6rem;

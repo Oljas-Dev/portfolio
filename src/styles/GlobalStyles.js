@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
+import normalize from "styled-normalize";
 
 const GlobalStyles = createGlobalStyle`
+${normalize}
+
 :root {
 // ---------- colors and themes ----------
 

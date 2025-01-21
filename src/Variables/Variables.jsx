@@ -26,6 +26,12 @@ const repeatingCode = {
       -webkit-text-fill-color: rgba(255, 255, 255, 0);
     }
   `,
+  media: `@media only screen and (max-width: 43.75em) {
+            display: none;
+          }
+          @media only screen and (max-height: 43.75em) {
+            display: none;
+          }`,
 };
 
 const ArticleContainer = styled.div`
@@ -34,14 +40,13 @@ const ArticleContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  margin: 0 2rem 0 2rem;
+  margin: 0 2rem 10rem 2rem;
   // transform: translateX(1%);
 
   cursor: pointer;
 
   @media only screen and (max-width: 62.5em) {
     transform: none;
-    margin-bottom: 10rem;
   }
   @media only screen and (max-width: 50em) {
     flex-direction: column;

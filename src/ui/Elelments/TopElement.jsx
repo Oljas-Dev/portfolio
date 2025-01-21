@@ -44,9 +44,7 @@ const TopElement = styled(StyledDesignElements)`
             }
           }
 
-          @media only screen and (max-width: 43.75em) {
-            display: none;
-          }
+          ${repeatingCode.media}
         `;
 
       case "secondary":
