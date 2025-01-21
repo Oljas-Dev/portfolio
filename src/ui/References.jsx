@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import behance from "../../public/sprite.svg#behance";
+import linkedin from "../../public/sprite.svg#linkedin";
+import github from "../../public/sprite.svg#github";
 
 const Container = styled.div`
   display: flex;
@@ -26,13 +28,13 @@ function References() {
         target="_blank"
       >
         <Icon>
-          <use xlinkHref="../../public/sprite.svg#linkedin" />
+          <use xlinkHref={linkedin} />
         </Icon>
       </a>
 
       <a href="https://github.com/Oljas-Dev" target="_blank">
         <Icon>
-          <use xlinkHref="../../public/sprite.svg#github" />
+          <use xlinkHref={github} />
         </Icon>
       </a>
     </Container>
