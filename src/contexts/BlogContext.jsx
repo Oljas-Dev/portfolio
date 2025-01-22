@@ -10,7 +10,7 @@ const ToggleContext = createContext();
 function ToggleProvider({ children }) {
   const [colorThemeToggle, setColorThemeToggle] = useState(true);
   const [colorsMobile, setColorsMobile] = useState(false);
-
+  const [overflow, setOverflow] = useState("hidden");
   const [newMarker, setNewMarker] = useState();
   const [appTheme, setAppTheme] = useLocalStorageState("dark", "appTheme");
   const [selectedColor, setSelectedColor] = useState(appTheme);
@@ -131,6 +131,8 @@ function ToggleProvider({ children }) {
         setAppTheme,
         onScroll,
         scrolled,
+        overflow,
+        setOverflow,
       }}
     >
       {children}

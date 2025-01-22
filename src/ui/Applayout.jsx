@@ -5,12 +5,12 @@ import ColorThemes from "./ColorThemes";
 import Footer from "./Footer";
 import Cursor from "./Cursor";
 import { useToggle } from "../contexts/BlogContext";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import MobileFooter from "./MobileFooter";
 import ToTopBtn from "./ToTopBtn";
 
 const MainStyled = styled.main`
-  overflow-y: auto;
+  overflow: ${(props) => props.$overflow};
   overflow-x: hidden;
   padding-bottom: -10rem;
 
@@ -38,15 +38,23 @@ const MainStyled = styled.main`
 `;
 
 function Applayout() {
-  const { scrolled, onScroll } = useToggle();
+  const { scrolled, onScroll, overflow, setOverflow } = useToggle();
 
   const path = window.location.pathname;
 
   const topPos = useRef(null);
   const navigation = useNavigate();
 
+  useEffect(() => {
+    if (path === "/home") {
+      setOverflow("hidden");
+    } else {
+      setOverflow("auto");
+    }
+  }, [path, setOverflow]);
+
   return (
-    <MainStyled onScroll={onScroll}>
+    <MainStyled onScroll={onScroll} $overflow={overflow}>
       <div ref={topPos}></div>
       <Outlet />
       <ColorThemes />
