@@ -34,9 +34,6 @@ const leftTop = keyframes`
   0% {
     transform: translateX(-70rem);
   }
-  80% {
-    transform: translateX(2rem);
-  }
   100% {
     transform: translateX(0);
   }
@@ -45,12 +42,6 @@ const leftTop = keyframes`
 const leftBottom = keyframes`
   0% {
     transform: translateY(35rem);
-  }
-  80% {
-    transform: translateY(35rem);
-  }
-  90% {
-    transform: translateY(-1rem);
   }
   100% {
     transform: translateY(0);
@@ -61,12 +52,6 @@ const rightTop = keyframes`
   0% {
     transform: translateY(-57rem);
   }
-  80% {
-    transform: translateY(-57rem);
-  }
-  90% {
-    transform: translateY(1rem);
-  }
   100% {
     transform: translateY(0);
   }
@@ -75,9 +60,6 @@ const rightTop = keyframes`
 const rightBottom = keyframes`
   0% {
     transform: translateX(72rem);
-  }
-  40% {
-    transform: translateX(1rem);
   }
   100% {
     transform: translateX(0);

@@ -10,6 +10,7 @@ const ToggleContext = createContext();
 function ToggleProvider({ children }) {
   const [colorThemeToggle, setColorThemeToggle] = useState(true);
   const [colorsMobile, setColorsMobile] = useState(false);
+
   const [newMarker, setNewMarker] = useState();
   const [appTheme, setAppTheme] = useLocalStorageState("dark", "appTheme");
   const [selectedColor, setSelectedColor] = useState(appTheme);

@@ -87,7 +87,7 @@ const RightTopElement = styled(StyledDesignElements)`
 
           top: 0;
           right: 29rem;
-          animation: ${rightTop} 1s ease-out;
+          animation: ${rightTop} 1s var(--elastic-easing);
 
           @media only screen and (max-width: 75em) {
             right: 20rem;
