@@ -91,36 +91,84 @@ const StyledA = styled.a`
   }
 `;
 
+//
+
+//
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 const t = {
-  title0: "::Fast React Pizza Website",
+  title0: "::Beauty Blog - A Modern Platform for Beauty Enthusiasts",
   paragraph0:
-    "Welcome to a pizza ordering application built with React.js and styled with Tailwind CSS. It was a lot of fun for me to work on this website. This project demonstrates my skills in:",
+    "The Beauty Blog is a visually stunning and user-friendly platform designed to captivate beauty enthusiasts and bloggers alike. This project demonstrates my ability to create an engaging website with a focus on aesthetics, functionality, and accessibility.",
+  subheading0: "Features",
   paragraphStrong1: {
-    strong: "--Component-based architecture: ",
-    text: "Building reusable UI components for a scalable application.",
+    strong: "--Dynamic Blog Content: ",
+    text: "Display blog posts with titles, images, and summaries in a clean, attractive layout.",
   },
   paragraphStrong2: {
-    strong: "--State management: ",
-    text: "Handling complex data flow and user interactions using React's state management techniques.",
+    strong: "--Post Categorization: ",
+    text: "Organized content by categories, making it easy for users to navigate and find topics of interest.",
   },
   paragraphStrong3: {
-    strong: "--API integration: ",
-    text: "Integrating with a mock API to fetch and display menu items, process orders, and manage user interactions.",
+    strong: "--Responsive Design: ",
+    text: "Fully optimized for mobile, tablet, and desktop screens, ensuring a smooth browsing experience.",
   },
+  subheading1: "Technologies and Techniques",
   paragraphStrong4: {
-    strong: "--Responsive design: ",
-    text: "Creating a user-friendly interface that adapts seamlessly to different screen sizes.",
+    strong: "--React: ",
+    text: "Developed using reusable components and hooks for modular and efficient code.",
   },
   paragraphStrong5: {
-    strong: "--Rapid prototyping: ",
-    text: "Leveraging Tailwind CSS's utility-first approach to quickly build and style the application's UI.",
+    strong: "--CSS Modules: ",
+    text: "Utilized modularized styles to achieve a consistent and maintainable design.",
   },
-  paragraph1: "Go ahead and check this project out in the link below! ",
+  paragraphStrong6: {
+    strong: "--React Router: ",
+    text: "Implemented for smooth navigation between pages without reloading.",
+  },
+  paragraphStrong7: {
+    strong: "--API Integration: ",
+    text: "Incorporated mock data fetching to simulate real-world content management systems.",
+  },
+  subheading2: "Skills Enhanced",
+  paragraphStrong8: {
+    strong: "--Web Design Aesthetics: ",
+    text: "Sharpened my ability to create visually appealing and brand-appropriate designs.",
+  },
+  paragraphStrong9: {
+    strong: "--React Development: ",
+    text: "Gained experience in creating dynamic user interfaces with reusable components.",
+  },
+  paragraphStrong10: {
+    strong: "--Routing and Navigation: ",
+    text: "Strengthened my skills in setting up intuitive and seamless site navigation.",
+  },
+  paragraphStrong11: {
+    strong: "--Performance Optimization: ",
+    text: "Focused on delivering fast load times and an efficient user experience.",
+  },
+  paragraph1:
+    "Explore the live demo using link below and see how beauty meets functionality! ",
   link0: {
-    a: "",
-    text: "pizza project",
+    a: "https://beauty-blog-dusky.vercel.app/homepage",
+    text: "beauty blog",
   },
-  tags: ["react", "tailwind"],
+  tags: ["react", "modules", "javascript"],
 };
 
 t.stringified = JSON.stringify(t, null, 2);

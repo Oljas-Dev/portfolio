@@ -216,11 +216,11 @@ const StyledLoader = styled.div`
   }
 
   &:before {
-    animation: ${WaveBeforeAnimation} 1.1s 0.1s infinite both;
+    animation: ${WaveBeforeAnimation} 1.2s 0.1s infinite both;
   }
 
   &:after {
-    animation: ${WaveBeforeAnimation} 0.9s 0.55s infinite both;
+    animation: ${WaveBeforeAnimation} 1s 0.55s infinite both;
   }
 `;
 

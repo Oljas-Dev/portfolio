@@ -15,6 +15,7 @@ function ToggleProvider({ children }) {
   const [appTheme, setAppTheme] = useLocalStorageState("dark", "appTheme");
   const [selectedColor, setSelectedColor] = useState(appTheme);
   const [scrolled, setScrolled] = useState(false);
+  const [moveSkills, setMoveSkills] = useState(-35);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -133,6 +134,8 @@ function ToggleProvider({ children }) {
         scrolled,
         overflow,
         setOverflow,
+        moveSkills,
+        setMoveSkills,
       }}
     >
       {children}

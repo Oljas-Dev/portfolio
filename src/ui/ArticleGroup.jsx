@@ -25,7 +25,7 @@ const Container = styled.div`
   border-right: 1px solid var(--color-borders);
   box-shadow: -2px 2px 4px rgb(0, 0, 0, 0.25);
 
-  animation: ${smoothAppear} ${(props) => props.$sec}s ease-out;
+  animation: ${smoothAppear} ${(props) => props.$sec}s var(--easing);
 `;
 
 const Preview = styled.div`
@@ -58,7 +58,7 @@ function ArticleGroup({
 }) {
   return (
     <StyledArticleGroup to={`${id}`}>
-      <Container $sec={`0.${i + 4}`}>
+      <Container $sec={`1.${i + 4}`}>
         <div>{title}</div>
         <Preview $color={preview?.color}>
           <h4>{preview?.title}</h4>

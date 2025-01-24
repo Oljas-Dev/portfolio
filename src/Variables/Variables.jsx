@@ -41,7 +41,6 @@ const ArticleContainer = styled.div`
   align-items: center;
   gap: 3rem;
   margin: 0 2rem 10rem 2rem;
-  // transform: translateX(1%);
 
   cursor: pointer;
 
@@ -102,7 +101,14 @@ const StyledOptions = styled.section`
   }}
 `;
 
-const SkillDescription = styled.div`
+const FlexBetween = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const SkillDescription = styled(FlexBetween)`
+  flex-direction: column;
+  align-items: center;
   background-color: var(--color-elements);
 
   width: 40rem;
@@ -115,11 +121,6 @@ const SkillDescription = styled.div`
   }
   @media only screen and (max-width: 43.75em) {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 30rem;
   }
 `;
 
@@ -245,4 +246,5 @@ export {
   StyledParagraph,
   Tags,
   Flex,
+  FlexBetween,
 };

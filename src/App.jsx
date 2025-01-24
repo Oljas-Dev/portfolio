@@ -53,7 +53,7 @@ function App() {
                 <Route path="/options/skills" element={<Skills />} />
                 <Route path="/options/contacts" element={<Contacts />} />
                 <Route path="/options/articles" element={<Articles />} />
-                <Route path="/loaders" element={<Loaders />} />
+                <Route path="/loader" element={<Loaders />} />
                 <Route
                   path="/options/development/:articleId"
                   element={

@@ -57,9 +57,10 @@ const ContactsCard = styled(SkillDescription)`
 
 const MapGroup = styled(SkillDescription)`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 1rem;
   width: 48rem;
+  height: 50rem;
   @media only screen and (max-width: 43.75em) {
     height: 60rem;
   }
