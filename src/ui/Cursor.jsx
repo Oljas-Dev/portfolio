@@ -12,7 +12,7 @@ const StyledCursor = styled.div`
 
   z-index: 100;
 
-  @media only screen and (max-width: 43.75em) {
+  @media only screen and (max-width: 62.5em) {
     display: none;
   }
 `;

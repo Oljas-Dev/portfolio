@@ -111,7 +111,7 @@ const SkillDescription = styled(FlexBetween)`
   align-items: center;
   background-color: var(--color-elements);
 
-  width: 40rem;
+  width: var(--width-skills);
   height: 50rem;
   border-radius: 5px;
   padding: 1rem 2rem;
