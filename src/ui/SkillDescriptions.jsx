@@ -43,6 +43,7 @@ const InlineDisplay = styled(Flex)`
 
   p {
     flex-grow: 1;
+    margin-bottom: 0.3rem;
   }
 `;
 
