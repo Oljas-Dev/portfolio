@@ -70,10 +70,7 @@ function Skills() {
             <Modal.Options mode="secondary" path="/options" />
           </Modal>
           <Container $move={moveSkills}>
-            <SkillDescriptions
-              title={description?.title}
-              desc={description?.description}
-            />
+            <SkillDescriptions desc={description} />
             <TagsCloud setTag={setTag} ref={topRef} skillsList={skillsList} />
           </Container>
         </StyledOptions>

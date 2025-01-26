@@ -5,15 +5,36 @@ import LinksContainer from "./LinksContainer";
 import { useToggle } from "../contexts/BlogContext";
 import { SkillDescription } from "../Variables/Variables";
 
-const Container = styled(SkillDescription)``;
+const Container = styled(SkillDescription)`
+  h3 {
+    margin-bottom: 1rem;
 
-function SkillDescriptions({ title, desc }) {
+    a {
+      font-size: 1.6rem;
+    }
+  }
+`;
+
+function SkillDescriptions({ desc }) {
   const { setMoveSkills } = useToggle();
   return (
     <Container>
       <span>
-        <h3>{title}</h3>
-        <p>{desc}</p>
+        <h2>{desc?.title}</h2>
+        {desc?.experience && (
+          <h3>{`Experience: ${desc?.experience} ${
+            desc.experience > 1 ? "years" : "year"
+          }`}</h3>
+        )}
+        {desc?.cert && (
+          <h3>
+            {`Certificates: ${desc?.cert.school}`}{" "}
+            <a href={desc?.cert.link} target="_blank">
+              ⬇️download
+            </a>
+          </h3>
+        )}
+        <p>{desc?.description}</p>
       </span>
       <LinksContainer moveSkills={setMoveSkills} />
     </Container>
@@ -21,8 +42,8 @@ function SkillDescriptions({ title, desc }) {
 }
 
 SkillDescriptions.propTypes = {
-  title: PropType.string,
-  desc: PropType.string,
+  // title: PropType.string,
+  desc: PropType.object,
 };
 
 export default SkillDescriptions;

@@ -28,7 +28,7 @@ const StyledArticle = styled.article`
   padding: 2rem;
   border-radius: 5px;
 
-  animation: ${smoothAppear} ${(props) => props.$sec}s ease-out;
+  animation: ${smoothAppear} ${(props) => props.$sec}s var(--easing);
 
   img {
     width: 100%;
@@ -91,84 +91,84 @@ const StyledA = styled.a`
   }
 `;
 
-//
-
-//
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 const t = {
-  title0: "::Beauty Blog - A Modern Platform for Beauty Enthusiasts",
+  title0: "::Wild Oasis - Interactive Dashboard for Data Visualization",
   paragraph0:
-    "The Beauty Blog is a visually stunning and user-friendly platform designed to captivate beauty enthusiasts and bloggers alike. This project demonstrates my ability to create an engaging website with a focus on aesthetics, functionality, and accessibility.",
+    "The Wild Oasis Dashboard is a powerful and intuitive tool for monitoring and visualizing key data metrics. This project highlights my ability to develop robust, data-driven web applications with a focus on clarity, usability, and performance.",
   subheading0: "Features",
   paragraphStrong1: {
-    strong: "--Dynamic Blog Content: ",
-    text: "Display blog posts with titles, images, and summaries in a clean, attractive layout.",
+    strong: "--Interactive Charts: ",
+    text: "Display dynamic charts and graphs for an engaging and insightful user experience.",
   },
   paragraphStrong2: {
-    strong: "--Post Categorization: ",
-    text: "Organized content by categories, making it easy for users to navigate and find topics of interest.",
+    strong: "--Data Filtering: ",
+    text: "Enable users to filter and customize displayed data for targeted analysis.",
   },
   paragraphStrong3: {
+    strong: "--Dark and Light Modes: ",
+    text: "Provides users with the ability to toggle between themes, ensuring a comfortable viewing experience in different lighting conditions.",
+  },
+  paragraphStrong30: {
+    strong: "--User Login Form: ",
+    text: "Includes a secure and elegant login form, demonstrating authentication features and user access management.",
+  },
+  paragraphStrong31: {
     strong: "--Responsive Design: ",
-    text: "Fully optimized for mobile, tablet, and desktop screens, ensuring a smooth browsing experience.",
+    text: "Designed to adapt seamlessly to any screen size, ensuring accessibility across devices.",
+  },
+  paragraphStrong32: {
+    strong: "--Clean UI: ",
+    text: "Minimalistic and organized interface for effortless navigation and information retrieval.",
   },
   subheading1: "Technologies and Techniques",
   paragraphStrong4: {
     strong: "--React: ",
-    text: "Developed using reusable components and hooks for modular and efficient code.",
+    text: "Built using reusable components and modern hooks to optimize performance and maintainability.",
   },
   paragraphStrong5: {
-    strong: "--CSS Modules: ",
-    text: "Utilized modularized styles to achieve a consistent and maintainable design.",
+    strong: "--Styled Components: ",
+    text: "Leveraged for component-level styling, enabling dynamic theme switching and easily customizable designs.",
   },
   paragraphStrong6: {
-    strong: "--React Router: ",
-    text: "Implemented for smooth navigation between pages without reloading.",
+    strong: "--Chart.js/React Chart Libraries: ",
+    text: "Integrated for rendering interactive and visually appealing data charts.",
   },
   paragraphStrong7: {
-    strong: "--API Integration: ",
-    text: "Incorporated mock data fetching to simulate real-world content management systems.",
+    strong: "--Mock Data Integration: ",
+    text: "Utilized React Context API for efficient state handling throughout the application.",
+  },
+  paragraphStrong70: {
+    strong: "--State Management: ",
+    text: "Employed mock APIs to simulate real-world data scenarios and improve development realism.",
   },
   subheading2: "Skills Enhanced",
   paragraphStrong8: {
-    strong: "--Web Design Aesthetics: ",
-    text: "Sharpened my ability to create visually appealing and brand-appropriate designs.",
+    strong: "--Theming with Styled Components: ",
+    text: "Mastered implementing dark and light mode functionality.",
   },
   paragraphStrong9: {
-    strong: "--React Development: ",
-    text: "Gained experience in creating dynamic user interfaces with reusable components.",
+    strong: "--Data Visualization: ",
+    text: "Gained expertise in designing and implementing dynamic visual representations of data. Gained experience in creating dynamic user interfaces with reusable components.",
   },
   paragraphStrong10: {
-    strong: "--Routing and Navigation: ",
-    text: "Strengthened my skills in setting up intuitive and seamless site navigation.",
+    strong: "--Authentication Basics: ",
+    text: "Enhanced skills in creating secure and user-friendly login mechanisms.",
   },
   paragraphStrong11: {
-    strong: "--Performance Optimization: ",
-    text: "Focused on delivering fast load times and an efficient user experience.",
+    strong: "--UI/UX Optimization: ",
+    text: "Strengthened my ability to create user-centric designs for dashboards and data tools.",
+  },
+  paragraphStrong12: {
+    strong: "--Responsive Design Mastery: ",
+    text: "Further honed my skills in creating adaptive layouts for diverse screen resolutions.",
   },
   paragraph1:
-    "Explore the live demo using link below and see how beauty meets functionality! ",
+    "Check out the live demo at Wild Oasis Dashboard (link below) to experience streamlined data visualization, elegant theming, and secure user interaction. Just in case login data: oljas@example.com, password: 1111",
   link0: {
-    a: "https://beauty-blog-dusky.vercel.app/homepage",
-    text: "beauty blog",
+    a: "https://wild-oasis-five-indol.vercel.app/dashboard",
+    text: "world wise app",
   },
-  tags: ["react", "modules", "javascript"],
+  tags: ["react", "styled components", "tanstack"],
 };
 
 t.stringified = JSON.stringify(t, null, 2);
@@ -215,11 +215,11 @@ function AdaptedText({ article, name }) {
     <>
       {dev && (
         <Container>
-          <StyledArticle $sec="0.5" $width="90%" ref={topRef}>
+          <StyledArticle $sec="1.2" $width="90%" ref={topRef}>
             <StyledH2>{article?.articleTitle}</StyledH2>
             <img src={article?.high_res} />
           </StyledArticle>
-          <StyledArticle $sec="0.7" $width="90%">
+          <StyledArticle $sec="1.5" $width="90%">
             {adaptedContent.map((item, index) => {
               if (item.type === "title") {
                 return (
@@ -259,7 +259,7 @@ function AdaptedText({ article, name }) {
 
       {library && (
         <Container>
-          <StyledArticle $sec="0.5">
+          <StyledArticle $sec="1.2">
             {adaptedContent.map((item, index) => {
               if (item.type === "title") {
                 return (
