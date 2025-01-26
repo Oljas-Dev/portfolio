@@ -181,6 +181,7 @@ function AdaptedText({ article, name }) {
   const articleText = article?.articleText;
 
   const adaptedContent = [];
+  const articleLink = [];
 
   const dev = name === "dev";
   const library = name === "library";
@@ -211,13 +212,19 @@ function AdaptedText({ article, name }) {
     }
   }
 
+  for (let key in articleText) {
+    key.startsWith("link") && articleLink.push(articleText[key].a);
+  }
+
   return (
     <>
       {dev && (
         <Container>
           <StyledArticle $sec="1.2" $width="90%" ref={topRef}>
             <StyledH2>{article?.articleTitle}</StyledH2>
-            <img src={article?.high_res} />
+            <a href={articleLink} target="_blank">
+              <img src={article?.high_res} />
+            </a>
           </StyledArticle>
           <StyledArticle $sec="1.5" $width="90%">
             {adaptedContent.map((item, index) => {

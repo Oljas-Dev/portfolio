@@ -15,12 +15,19 @@ const Container = styled(SkillDescription)`
 
 const MainInfo = styled.div`
   background: var(--color-btngradient1);
+  color: var(--color-mtext);
   width: var(--width-skills);
 
   margin: -1rem -2rem;
   padding: 1rem 2rem;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+
+  h3,
+  h2,
+  p {
+    color: var(--color-mtext) !important;
+  }
 
   a {
     font-size: 1.6rem;
