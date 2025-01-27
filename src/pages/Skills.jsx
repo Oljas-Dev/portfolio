@@ -48,8 +48,6 @@ function Skills() {
   const { moveSkills } = useToggle();
   const [tag, setTag] = useState(11);
 
-  console.log(moveSkills);
-
   const topRef = useRef(null);
 
   const skillArray = skills?.find((skill) => skill.id === 21);
