@@ -25,24 +25,18 @@ const Container = styled.div`
   }
   @media only screen and (max-width: 56.25em) {
     transform: translateX(-60%);
+    margin-bottom: 10rem;
   }
   @media only screen and (max-width: 50em) {
-    transform: translateX(-80%);
-    margin-bottom: 10rem;
-  }
-  @media only screen and (max-width: 43.75em) {
     gap: 40rem;
     transform: translateX(${(props) => props.$move}%);
-  }
-  @media only screen and (max-height: 43.75em) {
-    margin-bottom: 10rem;
   }
   @media only screen and (max-width: 37.5em) {
     margin-top: 2.5rem;
   }
   @media only screen and (max-width: 18.75em) {
     margin-top: 8rem;
-    transform: translateX(${(props) => props.$move + 2.5}%);
+    transform: translateX(${(props) => props.$move - 2}%);
   }
 `;
 
@@ -53,6 +47,8 @@ function Skills() {
   });
   const { moveSkills } = useToggle();
   const [tag, setTag] = useState(11);
+
+  console.log(moveSkills);
 
   const topRef = useRef(null);
 

@@ -35,7 +35,7 @@ const List = styled.li`
             transform: scale(1.1);
           }
 
-          @media only screen and (max-width: 43.75em) {
+          @media only screen and (max-width: 50em) {
             text-align: center;
             position: static;
           }
@@ -50,7 +50,7 @@ function TagsCloud({ setTag, ref, skillsList }) {
   const canvasWidth = window.innerWidth;
 
   function handleList(id) {
-    if (canvasWidth >= 700) {
+    if (canvasWidth >= 800) {
       setTag(id);
     } else {
       setMoveSkills(34);

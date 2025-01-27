@@ -9,7 +9,7 @@ const Container = styled(FlexBetween)`
 
 const SetBack = styled.span`
   cursor: pointer;
-  @media only screen and (min-width: 43.75em) {
+  @media only screen and (min-width: 60em) {
     display: none;
   }
 `;

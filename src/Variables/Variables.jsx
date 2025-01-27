@@ -116,10 +116,8 @@ const SkillDescription = styled(FlexBetween)`
   border-radius: 5px;
   padding: 1rem 2rem;
 
-  @media only screen and (max-width: 50em) {
-    width: 30rem;
-  }
   @media only screen and (max-width: 43.75em) {
+    height: 55rem;
     text-align: center;
   }
 `;
