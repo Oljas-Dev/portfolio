@@ -23,7 +23,7 @@ const StyledColorsToggle = styled.div`
     letter-spacing: ${(props) => props.$space};
   }
 
-  @media only screen and (max-width: 43.75em) {
+  @media only screen and (max-width: 56.25em) {
     display: none;
   }
 `;

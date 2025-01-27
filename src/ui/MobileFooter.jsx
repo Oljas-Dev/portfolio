@@ -9,7 +9,7 @@ import References from "./References";
 import ColorThemes from "./ColorThemes";
 
 const Container = styled.footer`
-  @media only screen and (min-width: 43.75em) {
+  @media only screen and (min-width: 56.25em) {
     display: none;
   }
 `;

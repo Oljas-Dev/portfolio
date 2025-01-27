@@ -55,7 +55,7 @@ const StyledPixels = styled.div`
 
           // Toggle for mobile and tab screens
 
-          @media only screen and (max-width: 43.75em) {
+          @media only screen and (max-width: 56.25em) {
             display: ${(props) => props.$display};
           }
         `;
