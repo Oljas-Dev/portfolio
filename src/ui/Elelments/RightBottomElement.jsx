@@ -83,7 +83,7 @@ const RightBottomElement = styled(StyledDesignElements)`
 
           bottom: 13rem;
           right: 0;
-          animation: ${rightBottom} 1.5s var(--elastic-easing);
+          animation: ${rightBottom} 1.5s var(--easing);
 
           @media only screen and (max-width: 75em) {
             width: 50%;

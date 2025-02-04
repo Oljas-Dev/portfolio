@@ -86,7 +86,7 @@ const LeftBottomElement = styled(StyledDesignElements)`
 
           bottom: 0;
           left: 26rem;
-          animation: ${leftBottom} 1.25s var(--elastic-easing);
+          animation: ${leftBottom} 1.25s var(--easing);
 
           @media only screen and (max-width: 75em) {
             left: 20rem;

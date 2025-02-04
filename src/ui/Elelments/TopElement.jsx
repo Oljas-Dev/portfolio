@@ -85,7 +85,7 @@ const TopElement = styled(StyledDesignElements)`
           left: -1rem;
           top: 14rem;
 
-          animation: ${leftTop} 1.333s var(--elastic-easing);
+          animation: ${leftTop} 1.333s var(--easing);
 
           @media only screen and (max-width: 62.5em) {
             width: 80rem;
